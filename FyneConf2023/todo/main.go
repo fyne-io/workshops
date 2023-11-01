@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	a := app.NewWithID("io.fyne.wotkshop.todo")
+	a := app.NewWithID("io.fyne.workshop.todo")
 	w := a.NewWindow("TODO")
 
 	data := binding.NewStringList()
