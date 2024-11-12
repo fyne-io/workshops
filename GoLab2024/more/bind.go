@@ -9,11 +9,12 @@ import (
 
 func main() {
 	a := app.NewWithID("io.fyne.workshop.extend")
-	w := a.NewWindow("Extend Label")
+	w := a.NewWindow("Bind Name")
 
 	name := binding.BindPreferenceString("user.name", a.Preferences())
 	w.SetContent(container.NewHBox(
-		widget.NewLabel("Please enter your name:"), widget.NewEntryWithData(name),
+		widget.NewLabel("Please enter your name:"),
+		widget.NewEntryWithData(name),
 	))
 
 	w.ShowAndRun()
